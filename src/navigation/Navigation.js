@@ -8,7 +8,7 @@ import {useTheme} from "../context/ThemeStore";
 
 const Navigation = () => {
     const {screen, setScreen} = useNavigation()
-    const {theme, setDark, setLight, isLight} = useTheme();
+    const {theme, setDark, setLight, isLight, THEME_COLOR} = useTheme();
     let renderScreen;
     switch (screen) {
         case SCREEN.MAIN:
@@ -18,7 +18,7 @@ const Navigation = () => {
             renderScreen = <CounterScreen/>
             break;
     }
-    return <View style={{flex: 1, backgroundColor: isLight ? '#fff' : '#424242'}}>{renderScreen}</View>
+    return <View style={{flex: 1, backgroundColor: THEME_COLOR.MAIN_BG}}>{renderScreen}</View>
 }
 
 export default Navigation;
