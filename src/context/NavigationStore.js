@@ -4,7 +4,7 @@ import {SCREEN} from '../constants';
 const NavigationContext = React.createContext({screen: SCREEN.MAIN, setScreen: () => {}});
 
 export const NavigationProvider = ({children}) => {
-    const [screen, setScreen] = useState(SCREEN.MAIN);
+    const [screen, setScreen] = useState(SCREEN.POSTS);
     return <NavigationContext.Provider value={{screen, setScreen}}>
         {children}
     </NavigationContext.Provider>
