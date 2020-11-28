@@ -7,6 +7,10 @@ const initialState = {
 }
 
 export const postsReducer = createReducer(initialState, {
+    TEST_ACTION: (state, action) => {
+        console.log(state, action)
+        return state;
+    },
     GET_POSTS_START: (state, action) => {
         state.isLoading = true;
         return state;
